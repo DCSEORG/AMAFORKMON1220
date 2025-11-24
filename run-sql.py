@@ -84,6 +84,14 @@ def execute_sql_script(server, database, script_file):
         conn.close()
 
 if __name__ == "__main__":
+    import os
+    
+    # Check if SQL script file exists
+    if not os.path.exists(SQL_SCRIPT_FILE):
+        print(f"\n✗ Error: SQL script file '{SQL_SCRIPT_FILE}' not found.")
+        print("Please ensure the database schema file exists at the specified path.")
+        exit(1)
+    
     try:
         execute_sql_script(SERVER, DATABASE, SQL_SCRIPT_FILE)
     except Exception as e:

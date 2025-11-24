@@ -152,7 +152,7 @@ namespace app.Services
                     }
                 }
                 
-                LastErrorLocation = "DatabaseService.GetExpensesAsync (line 111)";
+                LastErrorLocation = "DatabaseService.GetExpensesAsync";
                 
                 // Return dummy data on error
                 return GetDummyExpenses();
@@ -200,7 +200,7 @@ namespace app.Services
             {
                 _logger.LogError(ex, "Error fetching users from database");
                 LastError = $"Database Error: {ex.Message}";
-                LastErrorLocation = "DatabaseService.GetUsersAsync (line 167)";
+                LastErrorLocation = "DatabaseService.GetUsersAsync";
                 return new List<User>();
             }
         }
@@ -237,7 +237,7 @@ namespace app.Services
             {
                 _logger.LogError(ex, "Error fetching categories from database");
                 LastError = $"Database Error: {ex.Message}";
-                LastErrorLocation = "DatabaseService.GetCategoriesAsync (line 208)";
+                LastErrorLocation = "DatabaseService.GetCategoriesAsync";
                 return new List<ExpenseCategory>();
             }
         }
