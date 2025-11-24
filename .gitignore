@@ -1,0 +1,24 @@
+# Build artifacts
+app/bin/
+app/obj/
+publish/
+
+# Temporary files
+*.bak
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# DO NOT ignore app.zip - it's needed for deployment
+# !app.zip
